@@ -16,19 +16,19 @@ You can also click on "Clone or download" and download ZIP, then extract the fil
 
 ## Tests
 
-### RSS Feeds
+#### RSS Feeds
 - The allFeeds variable is defined and not empty.
 - Each feed has a URL and the URL is not empty.
 - Each feed has a name and the name is not empty.
 
-### The Menu
+#### The Menu
 - The menu is hidden by default.
 - Changes visibility when the menu icon is clicked.
 
-### Initial Entries
+#### Initial Entries
 - At least a single .entry element within the .feed container when the loadFeed function is called and completes its work.
 
-### New Feed Selection
+#### New Feed Selection
 - Content actually changes when a new feed is loaded by the loadFeed function.
 
 ## Resources
