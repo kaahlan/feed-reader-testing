@@ -28,10 +28,10 @@ $(function() {
         * not empty.
         */
         it('have a URL defined and the URL is not empty', function() {
-            for(i = 0; i < allFeeds.length; i++) {
-                expect(allFeeds[i].url).toBeDefined();
-                expect(allFeeds[i].url).not.toBe(0);
-            };
+            allFeeds.forEach(function(feed) {
+                expect(feed.url).toBeDefined();
+                expect(feed.url.length).not.toBe(0);
+            });
         });
 
         /** Loops through each feed in the allFeeds object and
@@ -39,10 +39,10 @@ $(function() {
         * not empty.
         */
         it('have a name defined and the name is not empty', function() {
-            for(i = 0; i < allFeeds.length; i++) {
-                expect(allFeeds[i].name).toBeDefined();
-                expect(allFeeds[i].name).not.toBe(0);
-            };
+            allFeeds.forEach(function(feed) {
+                expect(feed.name).toBeDefined();
+                expect(feed.name.length).not.toBe(0);
+            });
         });
     });
 
@@ -76,13 +76,11 @@ $(function() {
         * called once before each spec in the describe function.
         */
         beforeEach(function(done) {
-            loadFeed(0, function() {
-                done();
-            });
+            loadFeed(0, done);
         });
 
         it('are loaded once loadFeed function is called', function() {
-            expect($('.entry').length).toBeGreaterThan(0);
+            expect($('.feed .entry').length).toBeGreaterThan(0);
         });
     });
 
